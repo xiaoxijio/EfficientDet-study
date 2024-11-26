@@ -12,7 +12,7 @@ from utils.utils import preprocess, invert_affine, postprocess, STANDARD_COLORS,
 
 compound_coef = 0
 force_input_size = None  # set None to use default size
-# img_path = 'test_img/coco_test'
+# img_path = 'test_img/fish.jpg'  # 如果使用单独的图片需要修改preprocess 我下面会写提示
 img_path = glob.glob('test_img/coco_test' + os.sep + '*.jpg')
 
 anchor_ratios = [(1.0, 1.0), (1.4, 0.7), (0.7, 1.4)]
@@ -39,9 +39,10 @@ obj_list = ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train'
 # obj_list = ['fish', 'jellyfish', 'penguin', 'puffin', 'shark', 'starfish', 'stingray']
 
 color_list = standard_to_bgr(STANDARD_COLORS)
-input_size = 512
+input_sizes = [512, 640, 768, 896, 1024, 1280, 1280, 1536, 1536]
+input_size = input_sizes[compound_coef] if force_input_size is None else force_input_size
 # 原始图像 根据input_size调整后的图像 调整的数据信息(图片新的wh, 原始wh, 填充的wh)
-ori_imgs, framed_imgs, framed_metas = preprocess(img_path, max_size=input_size)
+ori_imgs, framed_imgs, framed_metas = preprocess(img_path, max_size=input_size)  # 如果使用单独的图片需要修改preprocess 进入这个函数 我会写提示
 
 if use_cuda:
     x = torch.stack([torch.from_numpy(fi).cuda() for fi in framed_imgs], 0)

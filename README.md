@@ -19,6 +19,6 @@ compound_coef看你需求，只学习的话建议为0
 # 设置参数
 num_epochs = 10
 lr = 1e-3
-compound_coef = 2
+compound_coef = 2  # 还是那句话 看需求
 load_weights = weights/efficientdet-d2.pth
 ```

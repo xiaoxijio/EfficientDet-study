@@ -28,5 +28,5 @@ lr = 1e-3
 compound_coef = 2  # 还是那句话 看需求
 load_weights = weights/efficientdet-d2.pth
 ```
-用自己数据集改一下data/data.yaml的数据就行  
+用自己数据集改一下data/data.yaml的数据就行 coco的我已提供 
 ![image](https://github.com/user-attachments/assets/c8522cf5-b90b-43ea-a8b2-045f7f1a2dfc)

@@ -1,7 +1,7 @@
 
 
 训练起来非常慢，建议使用预训练模型和小数据集 ，当然用coco的也行 。  
-我这里给大家提供了一个小数据集，夸克网盘链接：https://pan.quark.cn/s/4e4c8e9f5f0b     
+我这里给大家提供了一个小数据集，夸克网盘链接：https://pan.quark.cn/s/4926e8e2f173   
 下载好数据集后的目录  
 ![image](https://github.com/user-attachments/assets/420aa63f-83ec-4f52-8cde-9293bf8bf11e)
 

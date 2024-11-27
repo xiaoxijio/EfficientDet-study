@@ -30,5 +30,6 @@ load_weights = weights/efficientdet-d2.pth
 head_only = True  # 如果不是coco数据集设为False，如果用的coco数据集可以选择冻结
 ```
 用自己数据集改一下data/data.yaml的数据就行 coco的我已提供 
-![image](https://github.com/user-attachments/assets/bc66ccf2-f618-4043-9d64-9bd57824a5b3)
+![image](https://github.com/user-attachments/assets/d1d00a99-0e69-4709-b7d0-1a6433af3363)
+
 

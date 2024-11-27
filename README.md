@@ -1,7 +1,7 @@
 
 
-训练起来非常慢，建议使用预训练模型和小数据集  
-我这里给大家提供了一个小数据集，夸克网盘链接：晚点上传    
+训练起来非常慢，建议使用预训练模型和小数据集 ，当然用coco的也行 。  
+我这里给大家提供了一个小数据集，夸克网盘链接：https://pan.quark.cn/s/4e4c8e9f5f0b     
 下载好数据集后的目录  
 ![image](https://github.com/user-attachments/assets/420aa63f-83ec-4f52-8cde-9293bf8bf11e)
 
@@ -16,7 +16,7 @@
 # 设置参数
 num_epochs = 500
 lr = 1e-5
-compound_coef看你需求，只学习的话建议为0
+compound_coef = 0  # 看你需求，只学习的话建议为0
 ```
 
 使用预训练权重训练自己的数据集（强烈推荐）
@@ -27,6 +27,8 @@ num_epochs = 10
 lr = 1e-3
 compound_coef = 2  # 还是那句话 看需求
 load_weights = weights/efficientdet-d2.pth
+head_only = True  # 如果不是coco数据集设为False，如果用的coco数据集可以选择冻结
 ```
 用自己数据集改一下data/data.yaml的数据就行 coco的我已提供 
-![image](https://github.com/user-attachments/assets/c8522cf5-b90b-43ea-a8b2-045f7f1a2dfc)
+![image](https://github.com/user-attachments/assets/bc66ccf2-f618-4043-9d64-9bd57824a5b3)
+
